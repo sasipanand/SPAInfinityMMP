@@ -1,0 +1,254 @@
+Github:
+	Source Code Repository
+	Versioning: Commit ID
+	WebBased Application
+	Cloud Environments : dev,qa,stage/pre-prod,prod
+				devevlopment  : 5 stories -> dev ->qa -> pre-prod -> prod ->Release 2.0 (Release 1.0 + new feaTURES)
+				support : 5 bugs  		->   dev -> qa-> pre-prod->prod (Release 1.0)
+	Branching Strategy: develop,master,release,hotfix
+	Pull Request -> Compare two branches and difference of the commit id's 
+	Push,Pull from the local github
+	Collaboration tool
+
+Branches :
+
+	master - 2 commits 
+			>> develop
+			>> fix-1234 2commits
+				one file Login.java 1 commit 
+				
+						+ 3 commits 
+
+Signup : create an account
+
+Steps to push your code from Eclipse into Github  for the firt time:
+-----------------------------------------------------------
+ https://total-qa.com/devops-tutorial-1-pushing-code-local-global-repository-github/
+---------------------------------------------------------------------------------
+Scenario 1: Pushing the code into the Github for the first time.
+1. Create a local Git repository.	-> Right click on the project -> Team -> Sharepoject
+2. Create a repository in the Github->https://github.com/sudheer51/mmpprime.git
+3. Right click on the project -> Teams -> Commit ->
+			Git Staging view -> Add all the files which are required and stage them ->
+							    commit & Push -> git repository , username , token ,master -> finish 
+4. Access the repsitory link for the code pushed via Eclispe
+
+Generate a Token =>
+Settings => Network = > Developer Settings => Token Classicc
+		date : No Expiration
+		Select all the checkboxes 
+-----------------------------------------------------------------------------------
+ 
+Scenario 2: import the code into the eclipse ->Create a branch from master -> Perform changes ->commit & Push to Github->
+			create Pull request[compare the differences between two branches] ->Review->Merge into master 
+			
+Scenario 3: Refresh your_branch with latest master branch changes
+			switch to master 
+				>> team -> pull 
+			switch to your_branch
+				-> merge master 
+
+
+Scenario 4: Resolving Conflicts 
+			Conflicts:
+				Resolve the conflicts-Modify the file with required changes 
+				Add to index
+				commit and push
+----------------------------------------------------------------------------------
+Comparison of your branch against master:
+=======================================
+UpArrow -> means commits ahead of master 
+DownArrow-> mean you are behind master 
+
+
+
+ 
+------------------------
+master -> 5 commits 
+tc_123 -> 3 commits 
+downarrow -> tc_123 is behind master 
+right click -> team =>merge -> master 
+tc_123 -> 5 commits + 1 merge commit 
+------------------------------------
+gitbash commands :
+
+git init -> to convert java project / maven project into a git repository 
+git status -> to view the tracked /untracked files 
+git add filename.java -> to track them 
+git commit -m "Message " -> to commit the files 
+git push origin 
+git log -> to view all the commit information 
+git pull -> to fetch the latest changes in to the branch [Refresh the branch ]
+
+
+Next Day 
+
+Refresh the master branch -> pulling the latest changes 
+========
+	 506  cd C:\Users\sudhe\eclipse-workspace\GitRepoElite\DemoGitbash_Sigma
+  507  cd C:/Users/sudhe/eclipse-workspace/GitRepoElite/DemoGitbash_Sigma
+  508  pwd /?
+  509  man pwd
+  510  ls -al
+  511  git init
+  512  clear
+  513  ls -al
+  514  git status
+  515  clear
+  516  git status
+  517  cd src/
+  518  git status
+  519  ls -al
+  520  git add HelloWorld.java
+  521  git status
+  522  clear
+  523  git commit -m "Adding HelloWorld.java"
+  524  git status
+  525  git remote add origin https://github.com/sudheer51/DemoGitbash_Sigma.git
+  526  git push origin
+  527   git push --set-upstream origin master
+  528  history
+
+    git checkout branch_name
+    git checkout -b new_branch
+	git branch // to view the number of branches available 
+    vi LoginTests.java -> press i key in the keyboard for insert and do the changes and press escape key and type :wq
+    git status
+    git add LoginTests.java
+    git commit -m "removed the spaces"
+    git push origin
+    git push --set-upstream origin new_branch
+-----------------------------
+Scenario 3: Refresh the branch via master 
+
+ git checkout master
+  546  git pull
+  547  git checkout fixing_issues
+  548  git merge master
+  549  clear
+  550  git status
+---------------------------------------------
+Scenario Resolving conflicts 4:
+ 561  git checkout master
+  562  git pull
+  563  git checkout fixing_issues
+  564  git merge master
+  565  git status
+  566  git status
+  567  git add src/LoginTests.java
+  568  git commit -m "removed all the spaces"
+------------------------------------------------
+git log is checking the commit ID 
+
+
+Day#1
+take the latest code from master 
+create a copy -> branch
+
+Day#2
+master changes pushed by someone
+pull master 
+switch to my branch
+merge master
+branch created on Day#1 is not exactly the copy of master 
+
+Conflicts :
+Day#1
+master : 
+
+copy of master branch :modify_xml
+xml verbose:5
+commit into branch 
+push 
+
+Day#2 
+master :
+verbose:10
+
+pull the master 
+merge the master into the modify_xml
+verbose:10 
+
+
+
+
+
+
+
+=======================
+505  cd C:/Users/sudhe/eclipse-workspace/GitRepoElite/JavaOOPs
+  506  cd C:\Users\sudhe\eclipse-workspace\GitRepoElite\JavaOOPs
+  507  ls
+  508  ls -al
+  509  ls -a
+  510  ls -al
+  511  clear
+  512  git init
+  513  ls
+  514  ls -al
+  515  history
+  516  clear
+  517  git status
+  518  git add src/
+  519  git status
+  520  clear
+  521  git commit -m "Pusing the javaoops project"
+  522  git status
+  523  git log
+  524  git push origin
+  525  git push --set-upstream origin master
+  526  git status
+  527  git push --set-upstream origin master
+  528  clear
+  529  git log
+  530  git pull
+  531  git log
+  532  cldear
+  533  clear
+  534  git checkout -b modify_tests
+  535  git log
+  536  git checkout master
+  537  git pull
+  538  git log
+  539  git branch
+  540  git checkout modify_tests
+  541  clear
+  542  git merge master
+  543  git log
+  544  vi src/module-info.java
+  545  git status
+  546  git commit -m "updated the file via vi editor"
+  547  git add src/module-info.java
+  548  git commit -m "updated the file via vi editor"
+  549  git status
+  550  git log
+  551  git checkout master
+  552  git pull
+  553  git checkout modify_tests
+  554  git merge master
+  555  clear
+  556  git status
+  557  cd src/
+  558  vi module-info.java
+  559  vi module-info.java
+  560  git status
+  561  git add module-info.java
+  562  git commit -m "committed lines of logic"
+  563  clear
+  564  git status
+  565  git checkout master
+  566  git pull
+  567  git checkout modify_tests
+  568  git merge master
+  569  clear
+  570  vi module-info.java
+  571  git status
+  572  git add module-info.java
+  573  git commit -m "resolve conflicts"
+  574  git status
+  575  history
+
+
+
+
+
