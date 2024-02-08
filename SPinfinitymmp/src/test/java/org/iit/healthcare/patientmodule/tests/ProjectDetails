@@ -1,0 +1,133 @@
+Interview:
+Roles & Responsbilities:
+1. Senior QA / Junior QA / Test Lead/ Test Manager
+product / service 
+
+Responsbility :
+1. Write/ Design Testcases based on test case design techniques
+	a. Boundary Value Analysis
+	b. Equivalence Partioning
+	c. Error Guessing
+  1.1 Input Data
+  1.2 Test Case Template
+  1.3 Types of Testing 
+  1.4 Import the testcases to JIRA
+  1.5 Test Environment->Configuration Guide 
+   
+2. Review the testcases - Peer / Interview 
+
+3. [Test Lead , Test Manager ]Test Plan / Test Strategy / Risk & Mitigation / JIRA Dashboards /Reports - Traceability,Test Summary , Entry ,Exit ,Automation Summary
+    3.1 Excel Charts / Pie Charts / Pivot Table 
+	
+4. Test Execution 
+	Sprint LEvel 
+	System Level Testcases 
+	Integration Level Testcases 
+		4.1 Creation of test cycle
+		4.2 Add the tests to the test cycle
+		4.3 Pass/Fail/Blocked/Unexecuted - Test Lead 
+		4.4 Defects Statistics - Test Lead 
+		
+5. Test Automation - Example : n th Sprint -> (n+1) th Sprint 
+	5.1 Understanding the Framework
+	5.2 Design the framework- Example MMP 
+    5.3 Automate the testcases 
+    5.4 Maintain the code in Github -> Example MMP 
+    5.5 Integrate with Jenkins
+    5.6 Focus on Failed Testcases on regular basis
+    5.7 Cross Browser Testing 
+    5.8 Sanity Test Scenario 
+    5.9 Input Data Scenario 	
+
+About the Project : 
+
+
+Request URL: http://96.84.175.78/MMP-Release2-Integrated-Build.6.8.000/portal/messagedb.php
+Request Method: POST
+Status Code: 200 OK
+
+====================================================================================================================
+Description:
+MMP is web based application developed in the PHP[HyperText Pre-Processor] Sciprting language.
+MMP has two different modules one is Patient and Admin module.
+Its related to Patient Portal where the patients can directly acces the website and perfrom the following actions in teh website.
+1. Book Appointment
+2. Send Messages
+3. Information
+4. Pay Fees
+5. login
+6. logout
+7. Register 
+8. Profile - Edit/Cancel
+9. Patient Table  Details in the home Page 
+10. View the reports 
+
+Similar Patient Portal there is an Admin Portal where the Admin can directly access the webstie to perform the following actions
+1. Book Appointment for a patient
+2. Retrieve the infromation of the messages snt by patient
+3. Submit the reports
+4. REquest the patient to pay the fees
+
+
+Roles & Responsbilities:
+1. Framework
+		As part of the project we have used the Hybrid Framework the combination of Modular + Data Driven
+		
+		Modular : Identify the testscenario's and resuable steps and convert into methods
+		Data Driven: Maintain the input data in a 3rd patry  resource file- Xslx,xml,properties file 
+
+		a. Helper Class-MMPLibrary
+				1. Login
+				2. Navigation 
+				3. LaunchBrowser
+				4. Logout
+				
+		b. AppLibrary- Java methods 
+				1. Get Future Date- 
+				2. Generate random numbers
+				3. Read XLSX / XLS / Database
+		c. BaseClass
+				1. instantiate Driver-> extended by TestCAse Class 
+				2. protected variables
+				3. @BeforeClass annotation is added
+				4. All the properties stored in the configuration file are read in this BaseClass 
+				
+		d. config.properties
+				1. all the key values are maintained for project. username and password
+				2. BrowserType
+				3. patient details : username/password/url
+				4. admin details: username/password/url
+				5. environment:qa/dev/pre-prod 
+				
+		PageObject Model:
+				Actions performed in each every page are maintained in the Page Object class
+				This will helps in reusability and avoid redundancy and easy maintainenance 
+2. Test Case Automation:For Sprint [n] the testcases are automated in [n+1] th sprint 
+		Sprint 1:
+		Sprint 2: Sprint 1 testcases are automated. In General we automate Sprint n-1 testcases in Sprint n.
+		2 automation tester and 4 manual tester in the team.
+		10 developers+ 4 tester + 2 automation
+
+		TESTNG + MAVEN PROJECT + DEPENDENCIES+PLUGINS 
+3. Maintain the source code in the repo
+		Github: master
+			clone of the master and create a branch do the changes
+			get the PR created and assigned to reviewer
+			once reviewed merged into the master branch
+4. Execution
+
+			Jenkins: to trigger the testcases
+				1. download the repo code with master branch
+				2. execute tests
+					mvn clean test->pom.xml->testng.xml->@Test
+
+
+5. Challenges: 95 % automation is completed
+
+       5% -> Image verification is not possible
+	   
+	   Pop-up ->windows Auto IT 
+	   Flakiness->  100 Tests -> 60 passed / 40 failed 
+	                40 - analyse ->timeouts/build isssues/UI  
+	   Scalability - > Grouping in Testng 
+	   
