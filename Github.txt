@@ -1,4 +1,4 @@
-Github:
+What is Github :
 	Source Code Repository
 	Versioning: Commit ID
 	WebBased Application
@@ -11,6 +11,7 @@ Github:
 	Collaboration tool
 
 Branches :
+
 	master - 2 commits 
 			>> develop
 			>> fix-1234 2commits
