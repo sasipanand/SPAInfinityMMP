@@ -16,7 +16,7 @@ public class AssertionsExample {
 		System.out.println("Hello");
 	
 		Assert.assertFalse(result);
-		System.out.println("HelloWorld");
+		System.out.println("HelloWorld Everyone");
 		
 	}
 	@Test
