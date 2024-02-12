@@ -1,4 +1,4 @@
-package org.iit.healthcare.mmp.util;
+ctorpackage org.iit.healthcare.mmp.util;
 
 import org.iit.healthcare.mmp.pages.HomePage;
 import org.openqa.selenium.By;
@@ -13,7 +13,7 @@ public class MMPLib {
 	public HomePage loginValidUser(String username,String password)
 	{
 		 
-			driver.findElement(By.id("username")).sendKeys(username);
+			driver.findElement(By.cssSelector("input[id ='username']")).sendKeys(username);
 			driver.findElement(By.id("password")).sendKeys(password);
 			driver.findElement(By.name("submit")).click();
 			return new HomePage(driver);
