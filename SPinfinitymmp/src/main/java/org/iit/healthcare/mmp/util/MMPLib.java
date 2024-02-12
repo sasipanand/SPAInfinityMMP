@@ -13,7 +13,7 @@ public class MMPLib {
 	public HomePage loginValidUser(String username,String password)
 	{
 		 
-		 driver.findElement(By.xpath("//input[id='username']")).sendKeys(username);
+		 driver.findElement(By.id("username")).sendKeys(username);
 			driver.findElement(By.id("password")).sendKeys(password);
 			driver.findElement(By.name("submit")).click();
 			return new HomePage(driver);
