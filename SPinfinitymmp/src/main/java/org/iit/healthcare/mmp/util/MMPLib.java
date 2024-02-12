@@ -1,4 +1,4 @@
-ctorpackage org.iit.healthcare.mmp.util;
+package org.iit.healthcare.mmp.util;
 
 import org.iit.healthcare.mmp.pages.HomePage;
 import org.openqa.selenium.By;
