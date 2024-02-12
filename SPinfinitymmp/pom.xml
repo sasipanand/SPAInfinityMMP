@@ -32,14 +32,14 @@
 			<artifactId>webdrivermanager</artifactId>
 			<version>5.6.2</version>
 		</dependency>
-
-
 		<dependency>
-			<groupId>com.qa.webshop</groupId>
-			<artifactId>com.qa.webshop</artifactId>
+			<groupId>SeleniumConcepts</groupId>
+			<artifactId>SeleniumConcepts</artifactId>
 			<version>0.0.1-SNAPSHOT</version>
 		</dependency>
 	</dependencies>
 
+
+	
 
 </project>

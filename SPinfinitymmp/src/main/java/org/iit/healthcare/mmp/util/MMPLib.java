@@ -13,7 +13,7 @@ public class MMPLib {
 	public HomePage loginValidUser(String username,String password)
 	{
 		 
-			driver.findElement(By.id("username")).sendKeys(username);
+		 driver.findElement(By.id("username")).sendKeys(username);
 			driver.findElement(By.id("password")).sendKeys(password);
 			driver.findElement(By.name("submit")).click();
 			return new HomePage(driver);
@@ -41,23 +41,3 @@ public class MMPLib {
 	
 	 
 }
-
-
-
-
-/**
-public int add()
-{
-	
-	int a = 3;
-	int b =5;
-	int c = a+b;
-	return c;
-}
-public int add(int a, int b)
-{
-	
-	int c = a+b;
-	return c;
-}
-**/
