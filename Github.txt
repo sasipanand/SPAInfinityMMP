@@ -50,8 +50,12 @@ Scenario 3: Refresh your_branch with latest master branch changes
 
 
 Scenario 4: Resolving Conflicts 
-			Conflicts:
-				Resolve the conflicts-Modify the file with required changes 
+			Conflicts: Conflicts arises when two resources updates the same element in the same file or the same line in the same class and try to do above scenario 3
+				Create two branches(master,code changes) in eclipse and two branches in github (master,code changes)
+ 				In a java class(for eg MMPLib) in the project change xpath(from id to xpath) of an element in eclipse code changes branches 
+				Change the xpath(from id to CssSelector) of the same element in the same java class/program in master branch in github
+				Execute above scenario 3 you get a conflict in eclipse
+                                Resolve the conflicts-Modify the file with required changes 
 				Add to index
 				commit and push
 ----------------------------------------------------------------------------------
