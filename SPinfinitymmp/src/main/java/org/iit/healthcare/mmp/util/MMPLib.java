@@ -40,11 +40,10 @@ public class MMPLib {
 	{
 	    driver.get(url);
 	}
+
 	
 	 
 }
-<<<<<<< HEAD
-=======
 
 
 
@@ -65,4 +64,4 @@ public int add(int a, int b)
 	return c;
 }
 **/
->>>>>>> branch 'master' of https://github.com/sasipanand/SPAInfinityMMP
+
