@@ -50,7 +50,8 @@ Scenario 3: Refresh your_branch with latest master branch changes
 
 
 Scenario 4: Resolving Conflicts 
-			Conflicts: Conflicts arises when two resources updates the same element in the same file or the same line in the same class and try to do above scenario 3
+			Conflicts: Conflicts arises when two resources updates the same element in the same file or the same line in the same class and try to do above scenario 3. 
+				Please note conflict will arise only if same files are updated in the same line. if you don't update in eclipse but the same file is updated in github when you pull the 				updated file from github your code/file will be overidden
 				Create two branches(master,code changes) in eclipse and two branches in github (master,code changes)
  				In a java class(for eg MMPLib) in the project change xpath(from id to xpath) of an element in eclipse code changes branches 
 				Change the xpath(from id to CssSelector) of the same element in the same java class/program in master branch in github
