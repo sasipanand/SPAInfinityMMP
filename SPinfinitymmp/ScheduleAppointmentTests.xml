@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<suite name="Suite" verbose = "8">
-  <test thread-count="5" name="Sanity Test">
+<suite name="Suite">
+  <test thread-count="5" name="Test">
   <parameter name = "username" value="ria1"/>
    <parameter name = "password" value="Ria12345"/>
   <classes>
-  <class name="org.iit.healthcare.patientmodule.ScheduleAppointmentDatePicker_Tests"/>
+  <class name="org.iit.healthcare.patientmodule.tests.ScheduleAppointmentDatePicker_Tests"/>
   </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->

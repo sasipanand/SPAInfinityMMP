@@ -17,7 +17,7 @@ import org.testng.asserts.SoftAssert;
 //Create each xml file for each class then in a suite xml call all these xml's
 //hybrid framework can be a combination of modular and/ data driven and/keyword driven framework
 public class ScheduleAppointmentDatePicker_Tests extends BaseClass{
-	@Parameters({"username", "password"})// we have the values for the var's user name and password 
+	@Parameters({"username","password"})// we have the values for the var's user name and password 
 	
 	@Test
 	public void scheduleAppointmentTest(String username, String password)// there is no driver.findelement bcos logic must be in the method 

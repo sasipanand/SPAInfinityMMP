@@ -24,7 +24,7 @@ public class RegistrationDeskAssignment {
 		 * selenium driver version
 		 * System.setProperty("webdriver.chrome.driver","path to the chromedriver.exe");
 		 */
-		WebDriverManager.chromedriver().setup();
+		//WebDriverManager.chromedriver().setup();
 		driver = new ChromeDriver();
 		
 		driver.manage().window().maximize();

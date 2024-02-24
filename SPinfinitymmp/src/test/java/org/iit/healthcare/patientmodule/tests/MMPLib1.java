@@ -30,13 +30,13 @@ public class MMPLib1 {
 			return actual;
 	}
 	
-	public void navigateToModule(String moduleName)
+/*public void navigateToModule(String moduleName)
 	{
 		driver.findElement(By.xpath("//span[normalize-space()= "+moduleName+"]")).click();
 	}
 	public void launchBrowser(String url)
 	{
 		driver.get(url);
-	}
+	}*/
 
 }
