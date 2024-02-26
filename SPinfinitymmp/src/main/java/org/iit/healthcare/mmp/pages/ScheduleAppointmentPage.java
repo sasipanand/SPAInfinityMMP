@@ -6,6 +6,7 @@ import java.util.Calendar;
 import java.util.HashMap;
 import java.util.Random;
 
+import org.iit.healthcare.mmp.util.AppLibrary;
 import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -16,7 +17,7 @@ public class ScheduleAppointmentPage {
 	protected WebDriver driver;// We are declaring or initializing the driver as global variable here int i; so that it can be used anywhere in the class
 	private By moduleTab = By.xpath("//span[normalize-space()='Schedule Appointment']");// storing the locator info in a  variable. i will declare it as a global variable and give access modifier rights(private, protected,...)
 	private By appointmentButton = By.xpath("//input[@value='Create new appointment']");
-	private By datepickerID = By.id("datepicker");
+	private By datePickerID = By.id("datepicker");
 	// below is the constructor it is the method which will be called first. Instead of hardcoding  we pass value to constructor so it is initialized 
 	// and we can anywhere in any method in this class 
 	public  ScheduleAppointmentPage(WebDriver driver) // the driver in the argument is driver value that is chrome, firefox what we pass when we call this constructor
@@ -38,7 +39,7 @@ public class ScheduleAppointmentPage {
 		driver.findElement(By.xpath("//h4[text()='Dr."+doctorName+"']/parent::li/div/p[text()='Description:"+description+"']/ancestor::ul/following-sibling::button")).click();
 	
 		driver.switchTo().frame("myframe");
-		driver.findElement(datepickerID).click();
+		driver.findElement(datePickerID).click();
 		driver.findElement(By.xpath("//span[text()='Next']")).click();
 		
 		Random rand = new Random();
@@ -65,10 +66,11 @@ public class ScheduleAppointmentPage {
 		return expectedHMap;
 		
 	}
+	
 	public HashMap<String,String> bookAppoinment(int noofDays)
 	{
 		HashMap<String,String> expectedHMap = new HashMap<String,String>();
-		driver.findElement(By.xpath("//span[normalize-space()='Schedule Appointment']")).click();
+		driver.findElement(moduleTab).click();
 		driver.findElement(By.xpath("//input[@value='Create new appointment']")).click();
 		
 		String doctorName="Smith";
@@ -77,9 +79,9 @@ public class ScheduleAppointmentPage {
 		driver.findElement(By.xpath("//h4[text()='Dr."+doctorName+"']/parent::li/div/p[text()='Description:"+description+"']/ancestor::ul/following-sibling::button")).click();
 	
 		driver.switchTo().frame("myframe");
-		driver.findElement(By.id("datepicker")).click();
+		driver.findElement(datePickerID).click();
 		 
-		String futureDate = getFutureDate(noofDays);
+		String futureDate = AppLibrary.getFutureDate(noofDays);
 		String dateArr[] = futureDate.split("/");
 		System.out.println(dateArr[0]);
 		System.out.println(dateArr[1]);
@@ -128,6 +130,8 @@ public class ScheduleAppointmentPage {
 		return expectedHMap;
 	}
 	
+	 
+
 	
 
 public static String getFutureDate(int noofDays)

@@ -9,14 +9,14 @@ import org.testng.annotations.Parameters;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
-
-
 // if there is large data to be used and if data can't be hard coded even in the test scripts we can read it from JSON - Java script object notation as whenever u read a file
 // it is copied into the memory so if it is large then we will get memory error for xml file, property files, xlsx,xls,DB, CSV so go for JSON
 // if you create an xml file of a program it will help to invoke the program . For example if you create an xml for this java program it will help to invoke this java program/class
 //Create each xml file for each class then in a suite xml call all these xml's
 //hybrid framework can be a combination of modular and/ data driven and/keyword driven framework
+
 public class ScheduleAppointmentDatePicker_Tests extends BaseClass{
+	
 	@Parameters({"username","password"})// we have the values for the var's user name and password 
 	
 	@Test

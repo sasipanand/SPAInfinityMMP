@@ -29,7 +29,7 @@ public HashMap<String,String> fetchPatientData(){
 	}
 public String getPatientName(String username)
 {
-	String actual = driver.findElement(By.xpath("//h3[normalize-space()='"+username+"ria1']")).getText().trim();
+	String actual = driver.findElement(By.xpath("//h3[normalize-space()='"+username+"']")).getText().trim();
 	return actual;
 }
 
