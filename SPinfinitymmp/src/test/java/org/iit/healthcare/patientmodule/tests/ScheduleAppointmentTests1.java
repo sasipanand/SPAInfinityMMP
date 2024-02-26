@@ -18,7 +18,7 @@ import org.testng.annotations.Test;
 
 import io.github.bonigarcia.wdm.WebDriverManager;
 
-public class ScheduleAppointmentTests {
+public class ScheduleAppointmentTests1 {
 	WebDriver driver;
 	@Test
 	public void bookAppointment() throws InterruptedException, Exception 
