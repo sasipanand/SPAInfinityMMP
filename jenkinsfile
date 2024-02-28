@@ -1,0 +1,17 @@
+pipeline {
+    agent any
+
+    stages {
+        stage('Schedule Appointment Tests') {
+            steps {
+               git 'https://github.com/sasipanand/SPAInfinityMMP.git'
+ls('SPinfinitymmp') {
+ sh 'mvn clean test'
+
+
+}
+
+            }
+        }
+    }
+}
